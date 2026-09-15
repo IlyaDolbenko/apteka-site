@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f8fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Шапка */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #00796b;
+    color: #fff;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+/* Интро */
+.intro {
+    background: #e0f2f1;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.intro h1 {
+    color: #004d40;
+    margin-bottom: 15px;
+}
+
+/* Карточки */
+.services, .featured {
+    padding: 40px 30px;
+}
+
+.services h2, .featured h2 {
+    color: #00796b;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1 1 250px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #00695c;
+}
+
+/* Таблица прайса */
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.price-table th, .price-table td {
+    border: 1px solid #b2dfdb;
+    padding: 10px;
+    text-align: left;
+}
+
+.price-table th {
+    background: #00796b;
+    color: #fff;
+}
+
+.cat-medicine { background: #e3f2fd; }
+.cat-vitamins  { background: #e8f5e9; }
+.cat-medtech   { background: #fff3e0; }
+
+/* Товары */
+.product {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.product h3 {
+    color: #00695c;
+    margin-bottom: 10px;
+}
+
+/* Карта */
+.map {
+    padding: 40px 30px;
+}
+
+.map h2 {
+    color: #00796b;
+    margin-bottom: 20px;
+}
+
+/* Подвал */
+.footer {
+    background: #004d40;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.footer nav a {
+    color: #b2dfdb;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer nav a:hover {
+    text-decoration: underline;
+}
+
+.footer p {
+    margin-top: 10px;
+    font-size: 14px;
+}
