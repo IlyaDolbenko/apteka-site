@@ -4,92 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Аптека "Здоровье" — Главная</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<!-- ШАПКА САЙТА -->
 <header class="header">
     <div class="logo">
         <img src="images/logo.png" alt="Логотип аптеки Здоровье" width="60">
-        <span>Аптека "Здоровье"</span>
+        <span class="logo-text">Аптека "Здоровье"</span>
     </div>
-    <nav class="nav">
-        <a href="index.html">Главная</a>
-        <a href="about.html">О компании</a>
-        <a href="catalog.html">Каталог</a>
-        <a href="price.html">Прайс-лист</a>
-        <a href="contacts.html">Контакты</a>
+
+    <nav class="main-menu">
+        <ul>
+            <li><a href="index.html" class="active">Главная</a></li>
+            <li><a href="about.html">О компании</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="price.html">Прайс-лист</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+        </ul>
     </nav>
 </header>
 
-<section class="intro">
-    <h1>Ваше здоровье — наша забота!</h1>
-    <p>Широкий ассортимент лекарственных препаратов, витаминов 
-       и товаров для здоровья по доступным ценам. 
-       Квалифицированные фармацевты всегда готовы помочь.</p>
+<!-- ГЛАВНЫЙ БАННЕР -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Ваше здоровье — наша забота!</h1>
+        <p>Широкий ассортимент лекарств, витаминов и медтехники по доступным ценам</p>
+        <a href="catalog.html" class="btn">Перейти в каталог</a>
+    </div>
 </section>
 
+<!-- ТРИ КЛЮЧЕВЫХ ПРЕИМУЩЕСТВА -->
 <section class="services">
-    <h2>Наши услуги</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Консультация фармацевта</h3>
-            <p>Поможем подобрать лекарства и расскажем о 
-               правилах приёма.</p>
-        </div>
-        <div class="card">
-            <h3>Доставка на дом</h3>
-            <p>Бесплатная доставка лекарств по городу 
-               при заказе от 1000 руб.</p>
-        </div>
-        <div class="card">
-            <h3>Бронирование онлайн</h3>
-            <p>Забронируйте товар на сайте и заберите 
-               в удобное время.</p>
-        </div>
+    <article class="service service-green">
+        <h2>Консультация фармацевта</h2>
+        <p>Квалифицированные специалисты помогут подобрать препараты и расскажут о правилах приёма.</p>
+        <a href="about.html" class="btn-small">Подробнее</a>
+    </article>
+
+    <article class="service service-blue">
+        <h2>Доставка на дом</h2>
+        <p>Бесплатная доставка лекарств по городу при заказе от 1000 рублей.</p>
+        <a href="contacts.html" class="btn-small">Подробнее</a>
+    </article>
+
+    <article class="service service-orange">
+        <h2>Бронирование онлайн</h2>
+        <p>Забронируйте товар через сайт и заберите его в удобное время без очереди.</p>
+        <a href="catalog.html" class="btn-small">Подробнее</a>
+    </article>
+</section>
+
+<!-- НОВОСТИ И СОЦСЕТИ -->
+<section class="content">
+    <div class="news">
+        <h2>Новости аптеки</h2>
+
+        <article class="news-item">
+            <img src="images/news-1.jpg" alt="Новость о поступлении витаминов">
+            <div class="news-text">
+                <h3>Поступление витаминов</h3>
+                <p>В продажу поступила новая линейка витаминов для укрепления иммунитета.</p>
+            </div>
+        </article>
+
+        <article class="news-item">
+            <img src="images/news-2.jpg" alt="Новость о скидках">
+            <div class="news-text">
+                <h3>Скидки на медтехнику</h3>
+                <p>С 1 по 15 октября — скидка 15% на тонометры и глюкометры.</p>
+            </div>
+        </article>
+
+        <article class="news-item">
+            <img src="images/news-3.jpg" alt="Новость о вакцинации">
+            <div class="news-text">
+                <h3>Вакцинация от гриппа</h3>
+                <p>В аптеке доступна вакцинация от гриппа. Запись по телефону.</p>
+            </div>
+        </article>
     </div>
+
+    <aside class="social">
+        <h2>Мы в соцсетях</h2>
+        <ul class="social-list">
+            <li><a href="https://vk.com"><img src="images/social-vk.png" alt="ВКонтакте" width="32"> ВКонтакте</a></li>
+            <li><a href="https://t.me"><img src="images/social-tg.png" alt="Telegram" width="32"> Telegram</a></li>
+            <li><a href="https://wa.me"><img src="images/social-wa.png" alt="WhatsApp" width="32"> WhatsApp</a></li>
+        </ul>
+    </aside>
 </section>
 
-<section class="featured">
-    <h2>Популярные товары</h2>
-    <div class="cards">
-        <div class="card">
-            <img src="images/vitamins.jpg" alt="Витамины" width="200">
-            <h3>Витамины и БАДы</h3>
-            <p>Наименования для укрепления 
-               иммунитета.</p>
-        </div>
-        <div class="card">
-            <img src="images/medtech.jpg" alt="Медтехника" width="200">
-            <h3>Медицинская техника</h3>
-            <p>Тонометры, глюкометры, термометры 
-               и другие приборы.</p>
-        </div>
-        <div class="card">
-            <img src="images/medicine.jpg" alt="Лекарства" width="200">
-            <h3>Лекарственные препараты</h3>
-            <p>Сертифицированные препараты от ведущих 
-               производителей.</p>
-        </div>
-    </div>
-</section>
-
-<section class="map">
-    <h2>Как нас найти</h2>
-    <!-- Интерактивная карта Яндекс -->
-    <iframe src="https://yandex.ru/map-widget/v1/?ll=34.303175%2C53.304076&z=16" 
-            width="100%" height="350" frameborder="0"></iframe>
-</section>
-
+<!-- ПОДВАЛ -->
 <footer class="footer">
-    <nav>
-        <a href="index.html">Главная</a>
-        <a href="about.html">О компании</a>
-        <a href="catalog.html">Каталог</a>
-        <a href="price.html">Прайс-лист</a>
-        <a href="contacts.html">Контакты</a>
+    <div class="footer-contacts">
+        <h3>Аптека "Здоровье"</h3>
+        <p>г. Брянск, бульвар 50 лет Октября, д. 7</p>
+        <p>Телефон: +7 (4832) 123-45-67</p>
+        <p>Email: info@apteka-zdorovie.ru</p>
+    </div>
+
+    <nav class="footer-menu">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">О компании</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="price.html">Прайс-лист</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+        </ul>
     </nav>
-    <p>© 2026 Аптека "Здоровье". Все права защищены.</p>
+
+    <p class="copyright">© 2026 Аптека "Здоровье". Все права защищены.</p>
 </footer>
 
 </body>

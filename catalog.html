@@ -2,69 +2,75 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог товаров — Аптека "Здоровье"</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header class="header">
     <div class="logo">
-        <img src="images/logo.png" alt="Логотип" width="60">
-        <span>Аптека "Здоровье"</span>
+        <img src="images/logo.png" alt="Логотип аптеки Здоровье" width="60">
+        <span class="logo-text">Аптека "Здоровье"</span>
     </div>
-    <nav class="nav">
-        <a href="index.html">Главная</a>
-        <a href="about.html">О компании</a>
-        <a href="catalog.html">Каталог</a>
-        <a href="price.html">Прайс-лист</a>
-        <a href="contacts.html">Контакты</a>
+    <nav class="main-menu">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">О компании</a></li>
+            <li><a href="catalog.html" class="active">Каталог</a></li>
+            <li><a href="price.html">Прайс-лист</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+        </ul>
     </nav>
 </header>
 
-<main>
+<main class="page">
     <h1>Каталог товаров</h1>
 
-    <div class="product">
-        <img src="images/vitamin-c.jpg" alt="Витамин C" width="200">
-        <h3>Витамин C, 1 г, 10 пакетов</h3>
-        <p><strong>Описание:</strong> Аскорбиновая кислота 
-           для укрепления иммунитета.</p>
-        <p><strong>Особенности:</strong> Подходит для 
-           взрослых и детей с 14 лет.</p>
-        <p><strong>Характеристики:</strong> Форма выпуска — 
-           порошок; упаковка — 10 шт.</p>
-    </div>
+    <section class="products">
+        <article class="product">
+            <img src="images/vitamin-c.jpg" alt="Витамин C">
+            <h3>Витамин C, 500 мг, 100 таблеток</h3>
+            <p><strong>Описание:</strong> Аскорбиновая кислота для укрепления иммунитета.</p>
+            <p><strong>Особенности:</strong> Подходит для взрослых и детей с 14 лет.</p>
+            <p><strong>Характеристики:</strong> Форма выпуска — таблетки; упаковка — 100 шт.</p>
+        </article>
 
-    <div class="product">
-        <img src="images/tonometer.jpg" alt="Тонометр" width="200">
-        <h3>Тонометр автоматический Omron M2</h3>
-        <p><strong>Описание:</strong> Автоматический 
-           тонометр для измерения давления.</p>
-        <p><strong>Особенности:</strong> Адаптер в комплекте, 
-           память на 30 измерений.</p>
-        <p><strong>Характеристики:</strong> Манжета 22–32 см; 
-           питание — батарейки/адаптер.</p>
-    </div>
+        <article class="product">
+            <img src="images/tonometer.jpg" alt="Тонометр Omron M2">
+            <h3>Тонометр автоматический Omron M2</h3>
+            <p><strong>Описание:</strong> Автоматический тонометр для измерения давления.</p>
+            <p><strong>Особенности:</strong> Адаптер в комплекте, память на 30 измерений.</p>
+            <p><strong>Характеристики:</strong> Манжета 22–32 см; питание — батарейки/адаптер.</p>
+        </article>
 
-    <div class="product">
-        <img src="images/aspirin.jpg" alt="Аспирин" width="200">
-        <h3>Аспирин Экспресс, 500 мг, 12 таблеток</h3>
-        <p><strong>Описание:</strong> Препарат для 
-           профилактики тромбозов.</p>
-        <p><strong>Особенности:</strong> Таблетки шипучие.</p>
-        <p><strong>Характеристики:</strong> 500 мг × 12 таб.</p>
-    </div>
+        <article class="product">
+            <img src="images/aspirin.jpg" alt="Аспирин Кардио">
+            <h3>Аспирин Кардио, 100 мг, 30 таблеток</h3>
+            <p><strong>Описание:</strong> Препарат для профилактики тромбозов.</p>
+            <p><strong>Особенности:</strong> Кишечнорастворимая оболочка.</p>
+            <p><strong>Характеристики:</strong> 100 мг × 30 таб.</p>
+        </article>
+    </section>
 </main>
 
 <footer class="footer">
-    <nav>
-        <a href="index.html">Главная</a>
-        <a href="about.html">О компании</a>
-        <a href="catalog.html">Каталог</a>
-        <a href="price.html">Прайс-лист</a>
-        <a href="contacts.html">Контакты</a>
+    <div class="footer-contacts">
+        <h3>Аптека "Здоровье"</h3>
+        <p>г. Брянск, бульвар 50 лет Октября, д. 7</p>
+        <p>Телефон: +7 (4832) 123-45-67</p>
+        <p>Email: info@apteka-zdorovie.ru</p>
+    </div>
+    <nav class="footer-menu">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">О компании</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="price.html">Прайс-лист</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+        </ul>
     </nav>
-    <p>© 2026 Аптека "Здоровье".</p>
+    <p class="copyright">© 2026 Аптека "Здоровье". Все права защищены.</p>
 </footer>
 
 </body>

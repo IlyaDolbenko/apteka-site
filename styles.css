@@ -1,0 +1,609 @@
+/* ============================================================
+   СБРОС И БАЗОВЫЕ СТИЛИ
+   ============================================================ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f8fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ============================================================
+   СОСТОЯНИЯ ССЫЛОК (требование ЛР №2)
+   ============================================================ */
+a:link {
+    color: #00796b;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #00796b;
+}
+
+a:hover {
+    color: #004d40;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #d2691e;
+}
+
+/* ============================================================
+   ШАПКА САЙТА
+   ============================================================ */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #00796b;
+    color: #fff;
+    padding: 15px 40px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo-text {
+    color: #fff;
+}
+
+.main-menu ul {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.main-menu a:link,
+.main-menu a:visited {
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.main-menu a:hover {
+    color: #b2dfdb;
+    text-decoration: underline;
+}
+
+.main-menu a:active {
+    color: #ffd700;
+}
+
+.main-menu a.active {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+/* ============================================================
+   ГЛАВНЫЙ БАННЕР (HERO)
+   ============================================================ */
+.hero {
+    background: linear-gradient(rgba(0, 77, 64, 0.65), rgba(0, 77, 64, 0.65)),
+                url(images/hero-bg.jpg) no-repeat center center;
+    background-size: cover;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* ============================================================
+   КНОПКА "ПЕРЕЙТИ В КАТАЛОГ" (.btn)
+   ============================================================ */
+a.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #ffd700;
+    color: #004d40;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+a.btn:link,
+a.btn:visited {
+    color: #004d40;
+    text-decoration: none;
+}
+
+a.btn:hover {
+    background: #ffeb3b;
+    color: #004d40;
+    text-decoration: none;
+}
+
+a.btn:active {
+    background: #ffc107;
+    color: #004d40;
+}
+
+/* ============================================================
+   ТРИ КАРТОЧКИ УСЛУГ (одинаковая высота + кнопки на одном уровне)
+   ============================================================ */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    align-items: stretch;
+}
+
+.service {
+    flex: 1 1 300px;
+    padding: 40px 30px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.service h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #fff;
+    line-height: 1.3;
+}
+
+.service p {
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.service-green {
+    background: #00796b;
+}
+
+.service-blue {
+    background: #0288d1;
+}
+
+.service-orange {
+    background: #ef6c00;
+}
+
+/* ============================================================
+   КНОПКА "ПОДРОБНЕЕ" (.btn-small)
+   ============================================================ */
+a.btn-small {
+    display: inline-block;
+    align-self: center;
+    margin-top: auto;
+    padding: 8px 20px;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+a.btn-small:link,
+a.btn-small:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+a.btn-small:hover {
+    background: #fff;
+    color: #004d40;
+    text-decoration: none;
+}
+
+a.btn-small:active {
+    background: #b2dfdb;
+    color: #004d40;
+}
+
+/* ============================================================
+   НОВОСТИ И СОЦСЕТИ
+   ============================================================ */
+.content {
+    display: flex;
+    gap: 30px;
+    padding: 50px 40px;
+    flex-wrap: wrap;
+}
+
+.news {
+    flex: 2 1 500px;
+}
+
+.news h2 {
+    font-size: 28px;
+    color: #00796b;
+    margin-bottom: 25px;
+}
+
+.news-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.news-item img {
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.news-item h3 {
+    color: #00695c;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.news-item p {
+    color: #444;
+    font-size: 15px;
+}
+
+.social {
+    flex: 1 1 250px;
+}
+
+.social h2 {
+    font-size: 28px;
+    color: #00796b;
+    margin-bottom: 25px;
+}
+
+.social-list li {
+    margin-bottom: 15px;
+}
+
+.social-list a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 15px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: background 0.3s;
+}
+
+.social-list a:link,
+.social-list a:visited {
+    color: #222;
+    text-decoration: none;
+}
+
+.social-list a:hover {
+    background: #e0f2f1;
+    text-decoration: none;
+}
+
+.social-list img {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+}
+
+/* ============================================================
+   ВНУТРЕННИЕ СТРАНИЦЫ (about, catalog, price, contacts)
+   ============================================================ */
+.page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 30px;
+}
+
+.page h1 {
+    color: #004d40;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.page-section {
+    margin-bottom: 35px;
+}
+
+.page-section h2 {
+    color: #00796b;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.page-section p {
+    margin-bottom: 8px;
+}
+
+/* Список показателей в about.html */
+.stats-list {
+    list-style: disc;
+    padding-left: 25px;
+}
+
+.stats-list li {
+    margin-bottom: 8px;
+}
+
+/* ============================================================
+   КАТАЛОГ (catalog.html)
+   ============================================================ */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product {
+    flex: 1 1 300px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.product h3 {
+    color: #00695c;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.product p {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+/* ============================================================
+   ПРАЙС-ЛИСТ (price.html) — таблица по прямому назначению
+   ============================================================ */
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.price-table th,
+.price-table td {
+    border: 1px solid #b2dfdb;
+    padding: 12px;
+    text-align: left;
+}
+
+.price-table th {
+    background: #00796b;
+    color: #fff;
+    font-weight: bold;
+}
+
+.price-table tr.cat-medicine { background: #e3f2fd; }
+.price-table tr.cat-vitamins  { background: #e8f5e9; }
+.price-table tr.cat-medtech   { background: #fff3e0; }
+
+/* ============================================================
+   ПОДВАЛ
+   ============================================================ */
+.footer {
+    background: #004d40;
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer h3 {
+    color: #ffd700;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.footer p {
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+
+.footer-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-menu a:link,
+.footer-menu a:visited {
+    color: #b2dfdb;
+    text-decoration: none;
+}
+
+.footer-menu a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+.footer-menu a:active {
+    color: #fff;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #00695c;
+    font-size: 14px;
+    margin-top: 20px;
+    color: #b2dfdb;
+}
+
+/* ============================================================
+   АДАПТИВНОСТЬ
+   ============================================================ */
+
+/* Планшеты (до 1024px) */
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-menu ul {
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+}
+
+/* Мобильные (до 768px) */
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+    }
+
+    .service {
+        flex: 1 1 auto;
+    }
+
+    .content {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .news-item {
+        flex-direction: column;
+    }
+
+    .news-item img {
+        width: 100%;
+        height: 180px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-menu ul {
+        align-items: center;
+    }
+
+    .page {
+        padding: 25px 20px;
+    }
+
+    .page h1 {
+        font-size: 26px;
+    }
+
+    .page-section h2 {
+        font-size: 20px;
+    }
+}
+
+/* Маленькие телефоны (до 480px) */
+@media (max-width: 480px) {
+    .main-menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero {
+        min-height: 300px;
+        padding: 30px 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    a.btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .products {
+        flex-direction: column;
+    }
+
+    .price-table {
+        font-size: 13px;
+    }
+
+    .price-table th,
+    .price-table td {
+        padding: 8px;
+    }
+
+    .page {
+        padding: 20px 15px;
+    }
+}
