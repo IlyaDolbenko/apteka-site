@@ -1,66 +1,70 @@
 /* ============================================================
-   СБРОС И БАЗОВЫЕ СТИЛИ
+   БЛОК 1. СБРОС И БАЗОВЫЕ СТИЛИ
    ============================================================ */
+
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;  
+    margin: 0;               
+    padding: 0;              
 }
 
 html {
     scroll-behavior: smooth;
+    height: 100%; /* Важно */
 }
 
+/* Основной стиль страницы */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f4f8fb;
-    color: #222;
-    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;  
+    background: #f4f8fb;                        
+    color: #222;                                
+    line-height: 1.6;                           
+    display: flex;          
+    flex-direction: column; 
+    min-height: 100vh;      /* Минимальная высота — экран */
+}
+
+.main-content {
+    flex: 1 0 auto; /* Растягиваться и занимать всё свободное место */
+    display: flex;
+    flex-direction: column;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+    max-width: 100%;    
+    height: auto;       
+    display: block;     
 }
 
 ul {
     list-style: none;
 }
 
-/* ============================================================
-   СОСТОЯНИЯ ССЫЛОК (требование ЛР №2)
-   ============================================================ */
-a:link {
-    color: #00796b;
-    text-decoration: none;
-}
-
-a:visited {
-    color: #00796b;
-}
-
-a:hover {
-    color: #004d40;
-    text-decoration: underline;
-}
-
-a:active {
-    color: #d2691e;
-}
 
 /* ============================================================
-   ШАПКА САЙТА
+   БЛОК 2. СОСТОЯНИЯ ССЫЛОК
    ============================================================ */
+
+a:link { color: #00796b; text-decoration: none; }
+a:visited { color: #00796b; }
+a:hover { color: #004d40; text-decoration: underline; }
+a:active { color: #d2691e; }
+
+
+/* ============================================================
+   БЛОК 3. ШАПКА САЙТА
+   ============================================================ */
+
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex;                     
+    justify-content: space-between;    
+    align-items: center;               
     background: #00796b;
     color: #fff;
     padding: 15px 40px;
-    flex-wrap: wrap;
+    flex-wrap: wrap;                   
     gap: 15px;
+    flex-shrink: 0;                    
 }
 
 .logo {
@@ -71,9 +75,7 @@ a:active {
     font-weight: bold;
 }
 
-.logo-text {
-    color: #fff;
-}
+.logo-text { color: #fff; }
 
 .main-menu ul {
     display: flex;
@@ -88,23 +90,15 @@ a:active {
     text-decoration: none;
 }
 
-.main-menu a:hover {
-    color: #b2dfdb;
-    text-decoration: underline;
-}
+.main-menu a:hover { color: #b2dfdb; text-decoration: underline; }
+.main-menu a:active { color: #ffd700; }
+.main-menu a.active { color: #ffd700; text-decoration: underline; }
 
-.main-menu a:active {
-    color: #ffd700;
-}
-
-.main-menu a.active {
-    color: #ffd700;
-    text-decoration: underline;
-}
 
 /* ============================================================
-   ГЛАВНЫЙ БАННЕР (HERO)
+   БЛОК 4. ГЛАВНЫЙ БАННЕР (HERO)
    ============================================================ */
+
 .hero {
     background: linear-gradient(rgba(0, 77, 64, 0.65), rgba(0, 77, 64, 0.65)),
                 url(images/hero-bg.jpg) no-repeat center center;
@@ -116,11 +110,10 @@ a:active {
     text-align: center;
     color: #fff;
     padding: 40px 20px;
+    flex-shrink: 0;
 }
 
-.hero-content {
-    max-width: 700px;
-}
+.hero-content { max-width: 700px; }
 
 .hero-content h1 {
     font-size: 40px;
@@ -134,9 +127,11 @@ a:active {
     margin-bottom: 25px;
 }
 
+
 /* ============================================================
-   КНОПКА "ПЕРЕЙТИ В КАТАЛОГ" (.btn)
+   БЛОК 5. КНОПКА "ПЕРЕЙТИ В КАТАЛОГ" (.btn)
    ============================================================ */
+
 a.btn {
     display: inline-block;
     padding: 12px 30px;
@@ -149,26 +144,15 @@ a.btn {
     transition: background 0.3s, color 0.3s;
 }
 
-a.btn:link,
-a.btn:visited {
-    color: #004d40;
-    text-decoration: none;
-}
+a.btn:link, a.btn:visited { color: #004d40; text-decoration: none; }
+a.btn:hover { background: #ffeb3b; color: #004d40; text-decoration: none; }
+a.btn:active { background: #ffc107; color: #004d40; }
 
-a.btn:hover {
-    background: #ffeb3b;
-    color: #004d40;
-    text-decoration: none;
-}
-
-a.btn:active {
-    background: #ffc107;
-    color: #004d40;
-}
 
 /* ============================================================
-   ТРИ КАРТОЧКИ УСЛУГ (одинаковая высота + кнопки на одном уровне)
+   БЛОК 6. ТРИ КАРТОЧКИ УСЛУГ
    ============================================================ */
+
 .services {
     display: flex;
     flex-wrap: wrap;
@@ -192,26 +176,17 @@ a.btn:active {
     line-height: 1.3;
 }
 
-.service p {
-    margin-bottom: 20px;
-    flex-grow: 1;
-}
+.service p { margin-bottom: 20px; flex-grow: 1; }
 
-.service-green {
-    background: #00796b;
-}
+.service-green  { background: #00796b; }
+.service-blue   { background: #0288d1; }
+.service-orange { background: #ef6c00; }
 
-.service-blue {
-    background: #0288d1;
-}
-
-.service-orange {
-    background: #ef6c00;
-}
 
 /* ============================================================
-   КНОПКА "ПОДРОБНЕЕ" (.btn-small)
+   БЛОК 7. КНОПКА "ПОДРОБНЕЕ" (.btn-small)
    ============================================================ */
+
 a.btn-small {
     display: inline-block;
     align-self: center;
@@ -224,26 +199,15 @@ a.btn-small {
     transition: background 0.3s, color 0.3s;
 }
 
-a.btn-small:link,
-a.btn-small:visited {
-    color: #fff;
-    text-decoration: none;
-}
+a.btn-small:link, a.btn-small:visited { color: #fff; text-decoration: none; }
+a.btn-small:hover { background: #fff; color: #004d40; text-decoration: none; }
+a.btn-small:active { background: #b2dfdb; color: #004d40; }
 
-a.btn-small:hover {
-    background: #fff;
-    color: #004d40;
-    text-decoration: none;
-}
-
-a.btn-small:active {
-    background: #b2dfdb;
-    color: #004d40;
-}
 
 /* ============================================================
-   НОВОСТИ И СОЦСЕТИ
+   БЛОК 8. НОВОСТИ И СОЦСЕТИ
    ============================================================ */
+
 .content {
     display: flex;
     gap: 30px;
@@ -251,9 +215,7 @@ a.btn-small:active {
     flex-wrap: wrap;
 }
 
-.news {
-    flex: 2 1 500px;
-}
+.news { flex: 2 1 500px; }
 
 .news h2 {
     font-size: 28px;
@@ -285,14 +247,9 @@ a.btn-small:active {
     font-size: 18px;
 }
 
-.news-item p {
-    color: #444;
-    font-size: 15px;
-}
+.news-item p { color: #444; font-size: 15px; }
 
-.social {
-    flex: 1 1 250px;
-}
+.social { flex: 1 1 250px; }
 
 .social h2 {
     font-size: 28px;
@@ -300,9 +257,7 @@ a.btn-small:active {
     margin-bottom: 25px;
 }
 
-.social-list li {
-    margin-bottom: 15px;
-}
+.social-list li { margin-bottom: 15px; }
 
 .social-list a {
     display: flex;
@@ -315,16 +270,8 @@ a.btn-small:active {
     transition: background 0.3s;
 }
 
-.social-list a:link,
-.social-list a:visited {
-    color: #222;
-    text-decoration: none;
-}
-
-.social-list a:hover {
-    background: #e0f2f1;
-    text-decoration: none;
-}
+.social-list a:link, .social-list a:visited { color: #222; text-decoration: none; }
+.social-list a:hover { background: #e0f2f1; text-decoration: none; }
 
 .social-list img {
     width: 32px;
@@ -332,13 +279,17 @@ a.btn-small:active {
     flex-shrink: 0;
 }
 
+
 /* ============================================================
-   ВНУТРЕННИЕ СТРАНИЦЫ (about, catalog, price, contacts)
+   БЛОК 9. ВНУТРЕННИЕ СТРАНИЦЫ
    ============================================================ */
+
+/* Основной контент. Больше не нужен flex: 1, так как футер сам прижмётся */
 .page {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 30px;
+    width: 100%;      
 }
 
 .page h1 {
@@ -347,9 +298,7 @@ a.btn-small:active {
     margin-bottom: 25px;
 }
 
-.page-section {
-    margin-bottom: 35px;
-}
+.page-section { margin-bottom: 35px; }
 
 .page-section h2 {
     color: #00796b;
@@ -357,23 +306,20 @@ a.btn-small:active {
     margin-bottom: 15px;
 }
 
-.page-section p {
-    margin-bottom: 8px;
-}
+.page-section p { margin-bottom: 8px; }
 
-/* Список показателей в about.html */
 .stats-list {
     list-style: disc;
     padding-left: 25px;
 }
 
-.stats-list li {
-    margin-bottom: 8px;
-}
+.stats-list li { margin-bottom: 8px; }
+
 
 /* ============================================================
-   КАТАЛОГ (catalog.html)
+   БЛОК 10. КАТАЛОГ
    ============================================================ */
+
 .products {
     display: flex;
     flex-wrap: wrap;
@@ -404,14 +350,13 @@ a.btn-small:active {
     font-size: 18px;
 }
 
-.product p {
-    margin-bottom: 8px;
-    font-size: 15px;
-}
+.product p { margin-bottom: 8px; font-size: 15px; }
+
 
 /* ============================================================
-   ПРАЙС-ЛИСТ (price.html) — таблица по прямому назначению
+   БЛОК 11. ПРАЙС-ЛИСТ
    ============================================================ */
+
 .price-table {
     width: 100%;
     border-collapse: collapse;
@@ -420,8 +365,7 @@ a.btn-small:active {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
-.price-table th,
-.price-table td {
+.price-table th, .price-table td {
     border: 1px solid #b2dfdb;
     padding: 12px;
     text-align: left;
@@ -437,9 +381,11 @@ a.btn-small:active {
 .price-table tr.cat-vitamins  { background: #e8f5e9; }
 .price-table tr.cat-medtech   { background: #fff3e0; }
 
+
 /* ============================================================
-   ПОДВАЛ
+   БЛОК 12. ПОДВАЛ (Sticky Footer)
    ============================================================ */
+
 .footer {
     background: #004d40;
     color: #fff;
@@ -449,6 +395,7 @@ a.btn-small:active {
     gap: 30px;
     justify-content: space-between;
     align-items: flex-start;
+    flex-shrink: 0; /* Запрещаем сжиматься */
 }
 
 .footer h3 {
@@ -457,10 +404,7 @@ a.btn-small:active {
     font-size: 18px;
 }
 
-.footer p {
-    margin-bottom: 6px;
-    font-size: 15px;
-}
+.footer p { margin-bottom: 6px; font-size: 15px; }
 
 .footer-menu ul {
     display: flex;
@@ -468,20 +412,9 @@ a.btn-small:active {
     gap: 8px;
 }
 
-.footer-menu a:link,
-.footer-menu a:visited {
-    color: #b2dfdb;
-    text-decoration: none;
-}
-
-.footer-menu a:hover {
-    color: #ffd700;
-    text-decoration: underline;
-}
-
-.footer-menu a:active {
-    color: #fff;
-}
+.footer-menu a:link, .footer-menu a:visited { color: #b2dfdb; text-decoration: none; }
+.footer-menu a:hover { color: #ffd700; text-decoration: underline; }
+.footer-menu a:active { color: #fff; }
 
 .copyright {
     width: 100%;
@@ -493,117 +426,39 @@ a.btn-small:active {
     color: #b2dfdb;
 }
 
+
 /* ============================================================
-   АДАПТИВНОСТЬ
+   БЛОК 13. АДАПТИВНОСТЬ
    ============================================================ */
 
-/* Планшеты (до 1024px) */
 @media (max-width: 1024px) {
-    .header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .main-menu ul {
-        justify-content: center;
-    }
-
-    .hero-content h1 {
-        font-size: 32px;
-    }
-
-    .hero-content p {
-        font-size: 16px;
-    }
+    .header { flex-direction: column; text-align: center; }
+    .main-menu ul { justify-content: center; }
+    .hero-content h1 { font-size: 32px; }
+    .hero-content p { font-size: 16px; }
 }
 
-/* Мобильные (до 768px) */
 @media (max-width: 768px) {
-    .services {
-        flex-direction: column;
-    }
-
-    .service {
-        flex: 1 1 auto;
-    }
-
-    .content {
-        flex-direction: column;
-        padding: 30px 20px;
-    }
-
-    .news-item {
-        flex-direction: column;
-    }
-
-    .news-item img {
-        width: 100%;
-        height: 180px;
-    }
-
-    .footer {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
-
-    .footer-menu ul {
-        align-items: center;
-    }
-
-    .page {
-        padding: 25px 20px;
-    }
-
-    .page h1 {
-        font-size: 26px;
-    }
-
-    .page-section h2 {
-        font-size: 20px;
-    }
+    .services { flex-direction: column; }
+    .service { flex: 1 1 auto; }
+    .content { flex-direction: column; padding: 30px 20px; }
+    .news-item { flex-direction: column; }
+    .news-item img { width: 100%; height: 180px; }
+    .footer { flex-direction: column; text-align: center; align-items: center; }
+    .footer-menu ul { align-items: center; }
+    .page { padding: 25px 20px; }
+    .page h1 { font-size: 26px; }
+    .page-section h2 { font-size: 20px; }
 }
 
-/* Маленькие телефоны (до 480px) */
 @media (max-width: 480px) {
-    .main-menu ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .hero {
-        min-height: 300px;
-        padding: 30px 15px;
-    }
-
-    .hero-content h1 {
-        font-size: 24px;
-    }
-
-    .hero-content p {
-        font-size: 15px;
-    }
-
-    a.btn {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-
-    .products {
-        flex-direction: column;
-    }
-
-    .price-table {
-        font-size: 13px;
-    }
-
-    .price-table th,
-    .price-table td {
-        padding: 8px;
-    }
-
-    .page {
-        padding: 20px 15px;
-    }
+    .main-menu ul { flex-direction: column; align-items: center; gap: 10px; }
+    .hero { min-height: 300px; padding: 30px 15px; }
+    .hero-content h1 { font-size: 24px; }
+    .hero-content p { font-size: 15px; }
+    a.btn { padding: 10px 20px; font-size: 14px; }
+    .products { flex-direction: column; }
+    .price-table { font-size: 13px; }
+    .price-table th, .price-table td { padding: 8px; }
+    .page { padding: 20px 15px; }
 }
