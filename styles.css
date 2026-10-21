@@ -290,6 +290,7 @@ a.btn-small:active { background: #b2dfdb; color: #004d40; }
     margin: 0 auto;
     padding: 40px 30px;
     width: 100%;      
+    flex: 1 0 auto;
 }
 
 .page h1 {
