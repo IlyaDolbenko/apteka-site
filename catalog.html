@@ -4,74 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог товаров — Аптека "Здоровье"</title>
+
+    <!-- Подключаем основной CSS -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Подключаем CSS для печати (по умолчанию отключен) -->
+    <link rel="stylesheet" href="print.css" id="print-style" disabled>
+
+    <!-- Подключаем библиотеку jQuery для фильтра -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
 
-<header class="header">
-    <div class="logo">
-        <img src="images/logo.png" alt="Логотип аптеки Здоровье" width="60">
-        <span class="logo-text">Аптека "Здоровье"</span>
-    </div>
-    <nav class="main-menu">
-        <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="about.html">О компании</a></li>
-            <li><a href="catalog.html" class="active">Каталог</a></li>
-            <li><a href="price.html">Прайс-лист</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-    </nav>
-</header>
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="Логотип аптеки Здоровье" width="50">
+            <span class="logo-text">Аптека "Здоровье"</span>
+        </div>
 
-<main class="page">
-    <h1>Каталог товаров</h1>
+        <button class="burger-btn" id="burger-btn">☰</button>
 
-    <section class="products">
-        <article class="product">
-            <img src="images/vitamin-c.jpg" alt="Витамин C">
-            <h3>Витамин C, 500 мг, 100 таблеток</h3>
-            <p><strong>Описание:</strong> Аскорбиновая кислота для укрепления иммунитета.</p>
-            <p><strong>Особенности:</strong> Подходит для взрослых и детей с 14 лет.</p>
-            <p><strong>Характеристики:</strong> Форма выпуска — таблетки; упаковка — 100 шт.</p>
-        </article>
+        <nav class="main-menu" id="main-menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О компании</a></li>
+                <li><a href="catalog.html" class="active">Каталог</a></li>
+                <li><a href="price.html">Прайс-лист</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <article class="product">
-            <img src="images/tonometer.jpg" alt="Тонометр Omron M2">
-            <h3>Тонометр автоматический Omron M2</h3>
-            <p><strong>Описание:</strong> Автоматический тонометр для измерения давления.</p>
-            <p><strong>Особенности:</strong> Адаптер в комплекте, память на 30 измерений.</p>
-            <p><strong>Характеристики:</strong> Манжета 22–32 см; питание — батарейки/адаптер.</p>
-        </article>
+    <main class="page">
+        <div class="catalog-header">
+            <h1>Каталог товаров</h1>
+            <!-- Кнопка переключения версии для печати -->
+            <button id="btn-print-mode" class="btn-print">Версия для печати</button>
+        </div>
 
-        <article class="product">
-            <img src="images/aspirin.jpg" alt="Аспирин Кардио">
-            <h3>Аспирин Кардио, 100 мг, 30 таблеток</h3>
-            <p><strong>Описание:</strong> Препарат для профилактики тромбозов.</p>
-            <p><strong>Особенности:</strong> Кишечнорастворимая оболочка.</p>
-            <p><strong>Характеристики:</strong> 100 мг × 30 таб.</p>
-        </article>
-    </section>
-</main>
+        <!-- Контейнер для макета (фильтр слева, товары справа) -->
+        <div class="catalog-layout">
+            <!-- Блок фильтров (заполняется через JS) -->
+            <aside id="filters" class="filters-panel">
+                <!-- Фильтры будут здесь -->
+            </aside>
 
-<footer class="footer">
-    <div class="footer-contacts">
-        <h3>Аптека "Здоровье"</h3>
-        <p>г. Брянск, бульвар 50 лет Октября, д. 7</p>
-        <p>Телефон: +7 (4832) 123-45-67</p>
-        <p>Email: info@apteka-zdorovie.ru</p>
-    </div>
-    <nav class="footer-menu">
-        <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="about.html">О компании</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="price.html">Прайс-лист</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-    </nav>
-    <p class="copyright">© 2026 Аптека "Здоровье". Все права защищены.</p>
-</footer>
+            <!-- Блок товаров (заполняется через JS) -->
+            <section id="elements" class="products-grid">
+                <!-- Товары будут здесь -->
+            </section>
+        </div>
+    </main>
 
+    <footer class="footer">
+        <div class="footer-contacts">
+            <h3>Аптека "Здоровье"</h3>
+            <p>г. Брянск, бульвар 50 лет Октября, д. 7</p>
+            <p>Телефон: +7 (4832) 123-45-67</p>
+            <p>Email: info@apteka-zdorovie.ru</p>
+        </div>
+        <nav class="footer-menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О компании</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="price.html">Прайс-лист</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <p class="copyright">© 2026 Аптека "Здоровье". Все права защищены.</p>
+    </footer>
+
+    <!-- Подключаем скрипты -->
+    <script src="js/script.js"></script> <!-- Твой скрипт для бургера -->
+    <script src="js/catalog.js"></script> <!-- Новый скрипт для фильтра -->
 </body>
 </html>
